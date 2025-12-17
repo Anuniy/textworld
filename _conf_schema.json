@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Textworld 插件配置",
+  "properties": {
+    "max_rooms": {
+      "type": "integer",
+      "title": "最大房间数量",
+      "description": "同时存在的最大房间数量",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 50
+    },
+    "default_timeout": {
+      "type": "integer",
+      "title": "默认回合超时",
+      "description": "每轮行动的默认超时时间（秒）",
+      "default": 300,
+      "minimum": 30,
+      "maximum": 600
+    },
+    "char_creation_timeout": {
+      "type": "integer",
+      "title": "角色创建超时",
+      "description": "角色创建阶段的超时时间（秒）",
+      "default": 180,
+      "minimum": 60,
+      "maximum": 600
+    },
+    "max_players_per_room": {
+      "type": "integer",
+      "title": "每房间最大玩家数",
+      "description": "单个房间允许的最大玩家数量",
+      "default": 8,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "creation_timeout": {
+      "type": "integer",
+      "title": "创建流程超时",
+      "description": "房间创建引导流程的超时时间（秒）",
+      "default": 300,
+      "minimum": 60,
+      "maximum": 600
+    },
+    "admin_ids": {
+      "type": "array",
+      "title": "管理员ID列表",
+      "description": "拥有管理员权限的用户ID（QQ号）列表",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "examples": [
+        ["123456789", "987654321"]
+      ]
+    },
+    "world_setting_max_length": {
+      "type": "integer",
+      "title": "世界观建议最大字数",
+      "description": "世界观超过此长度时会提示用户选择处理方式",
+      "default": 4000,
+      "minimum": 500,
+      "maximum": 20000
+    },
+    "world_setting_summary_length": {
+      "type": "integer",
+      "title": "AI总结目标字数",
+      "description": "使用AI总结时的目标字数",
+      "default": 2000,
+      "minimum": 200,
+      "maximum": 5000
+    },
+    "world_template": {
+      "type": "string",
+      "title": "默认世界观模板",
+      "description": "快速创建或输入'默认'时使用的世界观设定",
+      "default": "",
+      "maxLength": 10000
+    },
+    "chunk_size": {
+      "type": "integer",
+      "title": "消息分段字数",
+      "description": "长消息分段时每段的最大字数",
+      "default": 1000,
+      "minimum": 200,
+      "maximum": 3000
+    },
+    "opening_max_length": {
+      "type": "integer",
+      "title": "开场白最大字数",
+      "description": "AI生成开场白的最大字数限制",
+      "default": 400,
+      "minimum": 100,
+      "maximum": 1000
+    },
+    "dm_response_max_length": {
+      "type": "integer",
+      "title": "DM回应最大字数",
+      "description": "AI生成DM回应的最大字数限制",
+      "default": 500,
+      "minimum": 100,
+      "maximum": 1500
+    },
+    "history_rounds_in_context": {
+      "type": "integer",
+      "title": "上下文历史轮数",
+      "description": "发送给AI的历史记录轮数",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "character_setting_max_length": {
+      "type": "integer",
+      "title": "角色设定最大字数",
+      "description": "玩家角色设定的最大字数",
+      "default": 500,
+      "minimum": 50,
+      "maximum": 2000
+    },
+    "enable_auto_save": {
+      "type": "boolean",
+      "title": "启用自动保存",
+      "description": "是否自动保存游戏进度（重启后可恢复）",
+      "default": false
+    },
+    "dm_style": {
+      "type": "string",
+      "title": "DM叙事风格",
+      "description": "AI DM的叙事风格描述，会加入提示词中",
+      "default": "生动、富有画面感、适度描写细节",
+      "maxLength": 200
+    }
+  },
+  "required": []
+}
