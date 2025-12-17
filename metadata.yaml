@@ -1,5 +1,6 @@
 name: textworld
-description: 多房间文字冒险游戏插件，支持角色创建、AI驱动剧情
-author: YourName
+display_name: 多房间文字冒险游戏插件，支持角色创建、AI驱动剧情
+desc: AstrBot 插件示例。 使用 TextWorld 库实现一个多房间文字冒险游戏，支持角色创建和 AI 驱动剧情。
+author: Anuniy
 version: 2.6.0
-repo: https://github.com/yourname/astrbot_plugin_textworld
+repo: https://github.com/Anuniy/textworld
